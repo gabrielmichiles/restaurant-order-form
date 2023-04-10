@@ -95,7 +95,7 @@ const CreateOrder = (props) => {
       <h2>Order Now</h2>
 
       <form onSubmit={submitOrder}>
-        <label>
+        <label htmlFor="form-name">
           <span>Name:</span>
           <input
             type="text"
@@ -107,7 +107,7 @@ const CreateOrder = (props) => {
         </label>
         {displayValidationErrors("name")}
 
-        <label>
+        <label htmlFor="form-phone">
           <span>Phone:</span>
           <input
             type="text"
@@ -119,7 +119,7 @@ const CreateOrder = (props) => {
         </label>
         {displayValidationErrors("phone")}
 
-        <label>
+        <label htmlFor="form-address">
           <span>Address:</span>
           <input
             type="text"
@@ -131,26 +131,30 @@ const CreateOrder = (props) => {
         </label>
         {displayValidationErrors("address")}
 
-        <label>
-          <span>Dishes:</span>
+        <fieldset>
+          <span id="form-dishes">Dishes:</span>
           <ul>
             {dishes.length == 0
               ? "Loading..."
               : dishes.map((dish) => (
                   <li key={dish._id}>
-                    <input
-                      type="checkbox"
-                      name="dishes"
-                      value={dish._id}
-                      onChange={handleCheckedDishes}
-                    />
-                    <span>
-                      {dish.name} - ${dish.price.toFixed(2)}
-                    </span>
+                    <label htmlFor={dish._id}>
+                      <input
+                        type="checkbox"
+                        name="dishes"
+                        value={dish._id}
+                        id={dish._id}
+                        onChange={handleCheckedDishes}
+                      />
+
+                      <span>
+                        {dish.name} - ${dish.price.toFixed(2)}
+                      </span>
+                    </label>
                   </li>
                 ))}
           </ul>
-        </label>
+        </fieldset>
         {displayValidationErrors("dishes")}
 
         <button type="submit">Submit</button>
