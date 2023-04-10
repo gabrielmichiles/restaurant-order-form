@@ -119,6 +119,7 @@ form button {
   justify-content: center;
   font-weight: bold;
   margin-top: 1rem;
+  color: black;
 }
 
 form button:hover {
