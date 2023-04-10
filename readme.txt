@@ -1,9 +1,10 @@
-Final Project Documentation
+Final Project Documentation 
 
 Restaurant Order Application
 # This application allows customers to submit an order to a restaurant through a form.
-# Dishes are retrieved from a database to be rendered on client. 
+# Dishes are retrieved from a database to be rendered on client.
 
+Link to deployed application: https://two600-goliveiramichi00.onrender.com
 
 # Getting started:
   1. Run 'npm install' to install required dependencies;
