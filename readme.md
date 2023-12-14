@@ -34,6 +34,8 @@ To create an order, follow these steps:
 4. Select at least 1 dish from the list.
 5. Click the "Submit Order" button.
 
+## Conclusion
+
 Feel free to explore and use this application to submit orders to the restaurant. If you encounter any issues or have any questions, please don't hesitate to reach out.
 
 Thank you for using our Restaurant Order Application!
